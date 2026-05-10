@@ -1,0 +1,40 @@
+import time
+import numpy as np
+import dask.array as da
+from dask.distributed import Client
+
+MATRIX_FILE = "matrix_data.npz"
+
+def matrix_mult_dask(client):
+    # 1. 直接用Dask加载矩阵，同时指定分块，不经过numpy全量加载
+    # 1000x1000矩阵推荐chunk=250，平衡任务数量和调度开销
+    dask_A = da.load_npz(MATRIX_FILE, array="a", chunks=(250, 250))
+    dask_B = da.load_npz(MATRIX_FILE, array="b", chunks=(250, 250))
+    
+    # 2. 提前把数据持久化到集群内存，避免重复传输（可选，进一步提速）
+    dask_A, dask_B = client.persist([dask_A, dask_B])
+    
+    # 3. 分布式矩阵乘法
+    dask_C = da.matmul(dask_A, dask_B)
+    
+    # 4. 触发计算
+    result = dask_C.compute()
+    return result.tolist()
+
+if __name__ == "__main__":
+    # 连接集群
+    client = Client("tcp://你的主节点IP:8786")
+    print(f"Dask集群信息：{client}")
+
+    size = 1000
+    print("\n【多机Dask分布式】开始计算...")
+    start = time.time()
+    C = matrix_mult_dask(client)
+    end = time.time()
+
+    print("=" * 60)
+    print(f"矩阵规模：{size}x{size}")
+    print(f"多机Dask分布式 运行时间：{end - start:.4f} 秒")
+    print("=" * 60)
+
+    client.close()
