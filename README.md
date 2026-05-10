@@ -5,3 +5,4 @@ the first step of learning GitHub
 此处有更改
 ## make the skill about GitHub is avilable for yourself
 1. manupuies these skills
+# create a md file for Teaching document
