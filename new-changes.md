@@ -8,3 +8,7 @@ upload a file from local called 新建文本.text
 try some things--stash
 
 try some things --reset
+
+try revert
+
+try amend
