@@ -6,3 +6,5 @@ upload a file from local called 新建文本.text
 ## attempt some play
 
 try some things--stash
+
+try some things --reset
