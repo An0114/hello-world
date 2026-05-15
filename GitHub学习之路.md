@@ -93,3 +93,117 @@ git commit --amend
 ```
 
 ## The Tag
+
+## Resolve the conflicts
+
+### VS code
+
+### Command
+
+## Make open contribution for a git project
+
+## Use Git in IDEA
+
+### get Git from VCS
+
+### .gitignore file
+
+add files about local configures to .gitignore file
+
+### Add and remove some file from Git in IDEA
+
+### Commit & Push in IDEA
+
+### Pull somethings from remote Git
+
+### Some about other branch in IDEA
+
+### Check out a new branch to local work place
+
+### Merge and Rebase in IDEA
+
+## Some advance in IDEA
+
+### Resolve conflicts in IDEA
+
+### git pull --rebase
+
+### Rollback
+
+### Reset
+
+#### git command
+
+git reset --soft
+
+git reset --mixed
+
+git reset --hard
+
+git reset --keep
+
+### Revert
+
+### Amend
+
+### Squash commit
+
+### Cherry pick
+
+### Stash & shelve
+
+### Git Blame
+
+### Compare
+
+### Tag
+
+## Git Command
+
+### git --version
+
+### git clone
+
+### git status
+
+### git add <file name>
+
+### git commit -m "commit message"
+
+### git push
+
+### git restore --staged
+
+### git commit -am""
+
+### git pull
+
+#### git pull --rebase
+
+git config pull.rebase ture
+
+### Rename,move,delete
+
+#### git rm <file name>
+
+#### git mv <file name> position
+
+### git log 
+
+### git reset
+
+### git restore <file>
+
+### git show <commitID>
+
+### git revert
+
+### git commit --amend
+
+### git branch
+
+### git merge
+
+### Fast Forward 
+
+### git rebase
