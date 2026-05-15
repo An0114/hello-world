@@ -207,3 +207,21 @@ git config pull.rebase ture
 ### Fast Forward 
 
 ### git rebase
+
+### git switch branch_name
+
+### git diff
+
+### git cherry pick
+
+### git checkout
+
+### git stash
+
+### git tag
+
+### squash some commit
+
+## Upload a file over the limitation of Git to GitHub
+
+### Git LFS
